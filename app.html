@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: darkgray;
+}
+.wrap-flex {
+    display: flex;
+    width: 100%;
+}
+.title-outline {
+    border: 3px solid;
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    height: 5px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 8%;
+    border-image:  linear-gradient(to right, darkgray , tomato , darkgray) 1;
+}
+.white {
+    background-image: linear-gradient(to right, darkgray , white , darkgray);
+}
+h1.main-title {
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    margin: auto;
+    margin-top: 20px;
+    border-style: ridge;
+    border-width: medium;
+    width: 26%;
+}
+.login {
+    text-align: right;
+    -webkit-text-stroke: 1px black;
+    color: white;
+    font-family: 'Times New Roman';
+    font-size: 20px;
+    margin-top: 35px;
+    border: 4px ridge;
+    border-color: lightgray;
+    background-image: radial-gradient(lightgray 5%, gray 15%, darkgray 80%);
+}
+</style>
+</head>
+<body>
+<div class="wrap-flex">
+    <h1 class="main-title">This is a <q>Practice</q> Project</h1>
+    <span class="login"><b>Login</b></span>
+</div>
+<div class="title-outline white"></div>
+
+</body>
+</html>

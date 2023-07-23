@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<style>
+body.background {
+    background-color: rgb(44, 44, 44);
+}
+.sidebar {
+    height: 100%;
+    width: 150px;
+    background-color: rgb(44, 44, 44);
+    position: fixed;
+    overflow-x: hidden;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+.sidebar a {
+    font-size: 24px;
+    color: white;
+    padding: 10px 20px 10px 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    display: block;
+    background: none;
+}
+.sidebar a:hover {
+    color: black;
+    background-color: lightgray;
+}
+.dropdown_items {
+    display: none;
+    background-color: rgb(107, 107, 107);
+    padding: 10px 0px 10px 30px;
+}
+
+.taskbar {
+    margin-left: 140px;
+    border: 10px solid black;
+    background-color: rgb(107, 107, 107);
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    height: 25px;
+    right: 0;
+    overflow-x: hidden;
+}
+.taskbar a{
+    color: white;
+    float: right;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 3px 4px 4px 4px;
+}
+.taskbar a:hover {
+    color: black;
+    background-color: lightgray;
+}
+header.leftborder {    
+    border: 10px solid black;
+    background-color: rgb(107, 107, 107);
+    border-right: none;
+    border-top: none;
+    border-bottom: 4px solid black;
+    height: 580px;
+    padding-top: 5px;
+    margin-left: 140px;
+}
+header.border {
+    border: 10px solid black;
+    border-bottom: 4px solid black;
+    border-top: 2px solid black;
+    background-color: rgb(107, 107, 107);
+    margin-left: 140px;
+    height: 60px;
+}
+header.rightborder {    
+    border: 10px solid black;
+    background-color: rgb(107, 107, 107);
+    border-left: none;
+    border-top: none;
+    border-bottom: 4px solid black;
+    height: 350px;
+    padding-top: 5px;
+}
+h1.center {
+    margin-left: 150px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    color: white;
+    font-size: 60px;
+}
+h3.left {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+    text-align: left;
+    font-size: 20pt;
+    color: rgb(209, 209, 209);
+}
+h3.center {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 30pt;
+    color: white;
+}
+h3.right {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    text-align: right;
+    font-size: 20pt;
+    color: rgb(209, 209, 209);
+}
+.renderborder {
+    border-left: 10px solid black;
+    border-bottom: 2px solid black;
+    background-color: rgb(107, 107, 107);
+    margin-left: 140px;
+    height: 200px;
+}
+.videoborder object,
+.videoborder embed,
+.videoborder iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.videoborder_overlay {
+    position: absolute;
+    border-right: 4px solid black;
+    border-left: 4px solid black;
+    border-top: 4px solid black;
+    background-color: rgba(128, 128, 128, .7);
+    color: white;
+    text-align: center;
+    object-fit: cover;    
+    overflow: hidden;
+    font-size: 1.1vw;
+    left: 45%;
+    bottom: 0;
+    width: 15%;
+    height: 5%;
+}
+.vertical_align {
+    vertical-align: middle;
+}
+.videoborder_hover {
+    position: absolute;
+    color: white;
+    font-size: 16pt;
+    background-color: rgba(0, 0, 0, .7);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-bottom: 56.25%;
+}
+.videoborder_overlay:hover {
+    position: absolute;
+    color: transparent;
+    font-size: 16pt;
+    background-color: rgba(0, 0, 0, .7);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-bottom: 56.25%;
+}
+.videoborder_hover:hover {
+    position: absolute;
+    color: white;
+    font-size: 16pt;
+    background-color: rgba(0, 0, 0, .7);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-bottom: 56.25%;
+}
+.videoborder {
+    position: relative;
+    border: 10px solid black;
+    border-bottom: 4px solid black;
+    border-top: 2px solid black;
+    background-color: rgb(107, 107, 107);
+    margin-left: 140px;
+    object-fit: cover;    
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 56.25%;
+    
+}
+
+
+</style>
+</head>
+<body class="background">
+    <nav class="sidebar">
+        <a href="Text_Practice.html">Home</a>
+        <a href="Text_Practice_Gallery.html">Animations</a>
+        <a href="Text_Practice_Images.html">Images</a>
+        
+    </nav>
+
+    <header><h1 class="center">Animations</h1></header>
+
+    <nav class="taskbar">
+        <a href="Text_Practice_ContactMe.html">Contact Me</a>
+        
+    </nav>
+
+    <div class="videoborder">
+        <iframe width="1920" height="1080" src="https://www.youtube.com/embed/lLXFi7AiVa8" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        <nav class="videoborder_overlay">
+            <div class="vertical_align">
+                <p>Project Summary</p>
+            </div>
+            <div class="videoborder_hover">
+                <h1>Vedergällning</h1>
+                <p>This was my University Capstone Project that I wrote, designed and animated.
+                    This piece was to demosntrate all the skills that I learned and acquired while at College.
+                    I utilized cloth physics for the armor pieces, artificial water physics with an animated noise texture, a Sun lighting system to give the illusion of time passing, and much more.
+                    My primary focus were the animations themselves.
+                    Spending hours on end to make sure that I was nailing the movement and energy that the characters should be giving off.
+                    This prject was produced in Maya and then compiled in After Effects were the audio and and any visual effects were added.
+                </p>
+            </div>
+        </nav>
+    </div>
+    <div class="videoborder">
+        <iframe width="1920" height="1080" src="https://drive.google.com/file/d/1e8SfBSVSOGorW7_52g21gLyBwqeecL-d/preview" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        <nav class="videoborder_overlay">
+            <div class="vertical_align">
+                <p>Project Summary</p>
+            </div>
+            <div class="videoborder_hover">
+                <h1>University Animation Work</h1>
+                <p>This video is a compilation of projects that I produced in my advanced animation class.
+                    The focus of the different projects were dependent on a them that was provided to us and we were to then visualize that theme in our own unique way.
+                    The projects utilize a strong use of choreography, lighting, and camera work.
+                    All of the projects were made in Maya.
+                </p>
+            </div>
+        </nav>
+    </div>
+    <div class="videoborder">
+        <iframe width="1920" height="1080" src="https://www.youtube.com/embed/3_WaOGG2D9U" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        <nav class="videoborder_overlay">
+            <div class="vertical_align">
+                <p>Project Summary</p>
+            </div>
+            <div class="videoborder_hover">
+                <h1>The Force</h1>
+                <p>A personal project that I did to learn how to rig and skin a mesh while also utilizing what I learned from my lightsaber render to demonstrate my understanding of lighting and emission.
+                    It features an animated lightsaber and hand with a functioning rig that catches and grabs the lightsaber as it is force pulled to itself.
+                    This was produced in 3DS Max.
+                </p>
+            </div>
+        </nav>
+    </div>
+    <div class="videoborder">
+        <iframe width="1920" height="1080" src="https://www.youtube.com/embed/PXYKEH2easw" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        <nav class="videoborder_overlay">
+            <div class="vertical_align">
+                <p>Project Summary</p>
+            </div>
+            <div class="videoborder_hover">
+                <h1>Life</h1>
+                <p>A short animation I made to demonstrate my use of facial animations and body movement.
+                    Produced in Maya.
+                </p>
+            </div>
+        </nav>
+    </div>
+    <div class="videoborder">
+        <iframe width="1920" height="1080" src="https://www.youtube.com/embed/7frf0fdKNDI" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        <nav class="videoborder_overlay">
+            <div class="vertical_align">
+                <p>Project Summary</p>
+            </div>
+            <div class="videoborder_hover">
+                <h1>Vault into Fight Pose</h1>
+                <p>A short animation I made to demonstrate my understanding of body movement and timing in motion.
+                    Produced in Maya.
+                </p>
+            </div>
+        </nav>
+    </div>
+    <div class="videoborder">
+        <iframe width="1920" height="1080" src="https://www.youtube.com/embed/_p33BnE6gns" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        <nav class="videoborder_overlay">
+            <div class="vertical_align">
+                <p>Project Summary</p>
+            </div>
+            <div class="videoborder_hover">
+                <h1>The Chase</h1>
+                <p>A short animation I made to demonstrate my understanding of body movement and timing in motion as well as the interaction between 2 characters near the end.
+                    Produced in Maya.
+                </p>
+            </div>
+        </nav>
+    </div>
+
+</body>

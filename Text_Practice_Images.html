@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<style>
+body.background {
+    background-color: rgb(44, 44, 44);
+}
+.sidebar {
+    height: 100%;
+    width: 150px;
+    background-color: rgb(44, 44, 44);
+    position: fixed;
+    overflow-x: hidden;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+.sidebar a {
+    font-size: 24px;
+    color: white;
+    padding: 10px 20px 10px 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    display: block;
+    background: none;
+}
+.sidebar a:hover {
+    color: black;
+    background-color: lightgray;
+}
+.dropdown_items {
+    display: none;
+    background-color: rgb(107, 107, 107);
+    padding: 10px 0px 10px 30px;
+}
+
+.taskbar {
+    margin-left: 140px;
+    border: 10px solid black;
+    background-color: rgb(107, 107, 107);
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    height: 25px;
+    right: 0;
+    overflow-x: hidden;
+}
+.taskbar a{
+    color: white;
+    float: right;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 3px 4px 4px 4px;
+}
+.taskbar a:hover {
+    color: black;
+    background-color: lightgray;
+}
+header.leftborder {    
+    border: 10px solid black;
+    background-color: rgb(107, 107, 107);
+    border-right: none;
+    border-top: none;
+    border-bottom: 4px solid black;
+    height: 580px;
+    padding-top: 5px;
+    margin-left: 140px;
+}
+header.border {
+    border: 10px solid black;
+    border-bottom: 4px solid black;
+    border-top: 2px solid black;
+    background-color: rgb(107, 107, 107);
+    margin-left: 140px;
+    height: 60px;
+}
+header.rightborder {    
+    border: 10px solid black;
+    background-color: rgb(107, 107, 107);
+    border-left: none;
+    border-top: none;
+    border-bottom: 4px solid black;
+    height: 350px;
+    padding-top: 5px;
+}
+h1.center {
+    margin-left: 150px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    color: white;
+    font-size: 60px;
+}
+h3.left {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+    text-align: left;
+    font-size: 20pt;
+    color: rgb(209, 209, 209);
+}
+h3.center {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 30pt;
+    color: white;
+}
+h3.right {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    text-align: right;
+    font-size: 20pt;
+    color: rgb(209, 209, 209);
+}
+.renderborder {
+    border-left: 10px solid black;
+    border-bottom: 2px solid black;
+    background-color: rgb(107, 107, 107);
+    margin-left: 140px;
+    height: 200px;
+}
+.imageborder object,
+.imageborder embed,
+.imageborder img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.imageborder_overlay {
+    position: absolute;
+    border-right: 4px solid black;
+    border-left: 4px solid black;
+    border-top: 4px solid black;
+    background-color: rgba(128, 128, 128, .7);
+    color: white;
+    text-align: center;
+    object-fit: cover;    
+    overflow: hidden;
+    font-size: 1.1vw;
+    left: 45%;
+    bottom: 0;
+    width: 15%;
+    height: 5%;
+}
+.vertical_align {
+    vertical-align: middle;
+}
+.imageborder_hover {
+    position: absolute;
+    color: white;
+    font-size: 24pt;
+    background-color: rgba(0, 0, 0, .7);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-bottom: 56.25%;
+}
+.imageborder_overlay:hover {
+    position: absolute;
+    color: transparent;
+    font-size: 24pt;
+    background-color: rgba(0, 0, 0, .7);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-bottom: 56.25%;
+}
+.imageborder_hover:hover {
+    position: absolute;
+    color: white;
+    font-size: 24pt;
+    background-color: rgba(0, 0, 0, .7);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-bottom: 56.25%;
+}
+.imageborder {
+    position: relative;
+    border: 10px solid black;
+    border-bottom: 4px solid black;
+    border-top: 2px solid black;
+    background-color: rgb(46, 46, 46);
+    margin-left: 140px;
+    object-fit: cover;    
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 56.25%;
+    
+}
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+</style>
+</head>
+<body class="background">
+    <nav class="sidebar">
+        <a href="Text_Practice.html">Home</a>
+        <a href="Text_Practice_Gallery.html">Animations</a>
+        <a href="Text_Practice_Images.html">Images</a>
+        
+    </nav>
+
+    <header><h1 class="center">Images</h1></header>
+
+    <nav class="taskbar">
+        <a href="Text_Practice_ContactMe.html">Contact Me</a>
+    </nav>
+
+    <div class="imageborder">
+        <img  src="Images/Droideka_quarter_lowerquality.png" alt="Droideka">
+        <nav class="imageborder_overlay">
+            <div class="vertical_align">
+                <p>Project Summary</p>
+            </div>
+            <div class="imageborder_hover">
+                <h1>Droideka</h1>
+                <p>A project that was the result of a friend's challenge to test and push my modeling skills.
+                    He sought to see how well I could model something more geometrical and mechanical as this droid. 
+                    This was a project took a lot of time and patience to try and achieve as much detail as I could.
+                    Blender was used in the making of this project.
+                </p>
+            </div>
+        </nav>
+    </div>
+    <div class="imageborder">
+        <img  src="Images/Acklay_01.png" alt="Acklay">
+        <nav class="imageborder_overlay">
+            <div class="vertical_align">
+                <p>Project Summary</p>
+            </div>
+            <div class="imageborder_hover">
+                <h1>Acklay</h1>
+                <p>Another project that was the result of a friend's challenge to test and push my modeling skills.
+                    He sought to see how well I could model something a bit more natural and unique like the Acklay from Star Wars.
+                    This was a project that utilized sculpting tools, which is something I did not have much experience with at the time.
+                    Blender was used in the making of this project.
+                </p>
+            </div>
+        </nav>
+    </div>
+    <div class="imageborder">
+        <img  src="Images/Lightsaber Profile Pic.jpg" alt="Lightsaber">
+        <nav class="imageborder_overlay">
+            <div class="vertical_align">
+                <p>Project Summary</p>
+            </div>
+            <div class="imageborder_hover">
+                <h1>Lightsaber</h1>
+                <p>This was a project that I created to use as a profile picture throughout all the platforms I am on.
+                    It was something that tested my knowledge of light, emission, and rendering.
+                    I created this with 3DS Max when Mental Ray was the go to renderer.
+                </p>
+            </div>
+        </nav>
+    </div>
+    <div class="imageborder">
+        <img  src="Images/Marks Project_Alpha.png" alt="Adventure Logo">
+        <nav class="imageborder_overlay">
+            <div class="vertical_align">
+                <p>Project Summary</p>
+            </div>
+            <div class="imageborder_hover">
+                <h1>Adventure Patch</h1>
+                <p>Tanspoaspfin<br>asofnapsoifsfnisfa<br>poifnaisfnapionfosniiso<br>nfaionsaindapsnfaniinandpn</p>
+            </div>
+        </nav>
+    </div>
+
+</body>

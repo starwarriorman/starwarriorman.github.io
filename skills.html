@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Jose Moreno's Website</title>
+    <meta charset="utf-8" />
+    <meta name ="description" content= "Simple Website page that works like a resume/description about me (Jose Moreno)" />
+    <meta name = "keywords" content ="HTML, CSS, JavaScript" />
+    <meta name = "author" content = "Jose Moreno" />
+    <link href ="websiteImage.ico" rel="icon" />
+
+
+    <style>
+        @font-face {
+            font-family: myCustomFont;
+            src: url(fonts/antonFont/Anton-Regular.ttf);
+        }
+        @font-face {
+            font-family: contextFont;
+            src: url(fonts/cormoFont/CormorantInfant-Regular.ttf);
+        }
+        @font-face {
+            font-family: contextFont;
+            src: url(fonts/cormoFont/CormorantInfant-Italic.ttf);
+            font-style: italic;
+        }
+        @font-face {
+            font-family: contextFont;
+            src: url(fonts/cormoFont/CormorantInfant-Bold.ttf);
+            font-weight: bold;
+        }
+        @font-face {
+            font-family: tableFont;
+            src: url(fonts/righteousFont/Righteous-Regular.ttf);
+        }
+        @font-face {
+            font-family: captionFont;
+            src: url(fonts/abrilFatfaceFont/AbrilFatface-Regular.ttf);
+        }
+        @font-face {
+            font-family: fancyFont;
+            src: url(fonts/ReenieBeanieFont/ReenieBeanie-Regular.ttf);
+        }
+        body {
+            margin: 0;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: #1A1E23;
+            font-family: contextFont;
+            color: white;
+
+        }
+        header {
+            color: #d3dae3;
+            font-family: myCustomFont;
+        }
+        .navigationBar {
+            overflow: hidden;
+            background-color: #8b9bb0;
+            font-family: contextFont;
+            text-align: center;
+        }
+        .navigationBar a {
+            position: relative;
+            float:left;
+            color: #f2f2f2 ;
+            text-align:center;
+            padding: 14px 16px;
+            text-decoration:none;
+            font-size: 20px;
+            display: block;
+            text-transform: uppercase;
+            transition: width 2s;
+            -webkit-transition: width 2s;
+        }
+        .navigationBar a::after {
+            position: absolute;
+            content: "";
+            margin-top: 5px;
+            right: 0;
+            width: 0;
+            height: 3px;
+            display: block;
+            background: #1A1E23;
+            transition: width .5s ease;
+        } 
+        .navigationBar a:hover {
+            background-color: #dde3eb;
+            color: black;
+            width: 250px;
+        }
+        .navigationBar .demo:hover {
+            width: 100px;
+        }
+        .navigationBar a:hover::after {
+            width: 100%;
+            left: 0;
+            background: #1A1E23;
+        }
+        .navigationBar a.active {
+            background-color:#dde3eb;
+            color:black;
+        }
+        table {
+            table-layout: fixed;
+            width: 100%;
+            border-collapse:initial;
+            color: black;
+            font-family: tableFont;
+            letter-spacing: 2px;
+        }
+        thead {
+            font-family: captionFont;
+            font-size: 30px;
+            letter-spacing: 4px;
+        }
+        thead tr th:nth-child(1) {
+            width: 30%;
+        }
+
+        thead tr th:nth-child(2) {
+            width: 30%;
+        }
+
+        thead tr th:nth-child(3) {
+            width: 30%;
+            }
+
+        th, td {
+            padding: 30px;
+        }
+        .skillIcon {
+            float: left;
+        }
+        caption {
+            padding: 15px;
+            color: #dde3eb;
+            caption-side: top;
+            font-family: fancyFont;
+            font-size: 30px;
+        }
+        header h1 {
+            transition: transform 0.5s ease;
+        }
+        header h1:hover {
+            transform: translateX(300px);
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="images/list.png" alt = "Skills List Icon" class="skillIcon" width = 50 height = 50>
+        <h1> Skills</h1>
+    </header>
+
+    <hr>
+
+    <nav class="navigationBar">
+        <a href = "index.html">HOME</a>
+        <a href = "education.html">EDUCATION</a>
+        <a class = "active">SKILLS</a>
+        <a href = "work.html">WORK EXPERIENCE</a>
+        <a href = "contact.html">CONTACT INFORMATION</a>
+        <a class = "demo" href= "demo.html">DEMO</a>
+
+    </nav>
+
+
+    <table>
+        <caption>Programming Skills</caption>
+        <colgroup>
+            <col style = "background-color: #dde3eb">
+            <col style = "background-color: #dde3eb">
+            <col style = "background-color:#dde3eb">
+        </colgroup>
+        <thead>
+            <tr>
+                <th> Java </th>
+                <th> C++ </th>
+                <th> HTML </th>
+            </tr>
+        </thead>
+
+        <tr>
+            <td>        
+                <ul class = "listOfSkillsJava">
+                <li> <details><summary>Mobile App</summary>
+                    <p> Features regarding the app </p>
+                    <ol>
+                        <li>Mobile App that used the Google FIT API.</li>
+                        <li>Had a stopwatch that kept track of the steps and distance you walked.</li>
+                        <li>Could created saved routes that track how long you previously walked.</li>
+                        <li>Had a team feature which allowed us to see teammate's saved routes.</li>
+                    </ol>
+                    
+                    </details>
+                </li>
+                <li> <details><summary>Data Structures</summary><p>Some of the data structures I've used but not limited to include
+                    Queues , Stack, RB Tree, AVL Trees, Binary Search Tree and others.
+                </p></details></li>
+
+                </ul>
+            </td>
+
+            <td>
+                <ul class = "listOfSkillsC++">
+                    <li> <details><summary>Six Degrees of Kevin Bacon</summary><p>Program that finds a connection between any 2 actors in 
+                        the least amount of connections from actor to actor. </p>
+                        <ol>
+                            <li>Use of Dijkstra's Algorithm.</li>
+                            <li>Use of Maps</li>
+                        </ol>
+                    </details></li>
+                    <li> <details><summary>Data Structures</summary><p>Some of the data structures I've used but not limited to include
+                        Queues , Stack, RB Tree, AVL Trees, Binary Search Tree and others.
+                    </p></details></li>
+                </ul>
+
+            </td>
+
+            <td>
+                <ul class = "listOfSkillsHTML">
+                    <li> <details><summary>Resume Website</summary><p>Currently creating a website that works as a Resume of mine.
+                    </p></details></li>
+                </ul>
+
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+
+</html>
